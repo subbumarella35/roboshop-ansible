@@ -2,37 +2,7 @@
   hosts: all
   become: yes
   tasks:
-    - name: Install nginx
-      ansible.builtin.yum:
-        name: nginx
-        state: latest
-
-    - name: Removing default content that web server is serving.
-      ansible.builtin.file:
-        path: /usr/share/nginx/html
-        state: absent
-     
-    - name: Creat a directory
-      ansible.builtin.file:
-        path: /usr/share/nginx/html
-        state: directory
     
-    - name: Download the frontend content
-      ansible.builtin.unarchive:
-        src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
-        dest: /usr/share/nginx/html
-        remote_src: yes
-    
-    - name: Create Nginx Reverse Proxy Configuration.
-      ansible.builtin.copy:
-        src: roboshop.conf  
-        dest: /etc/nginx/default.d/roboshop.conf
-
-    - name: Restart Service
-      ansible.builtin.service:
-        name: nginx
-        state: restarted
-        enabled: true
   
 
 
