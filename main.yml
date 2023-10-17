@@ -2,6 +2,6 @@
     hosts: all
     become: yes
     roles:  
-      - frontend
+      - "{{ role_name }}"
 
   
