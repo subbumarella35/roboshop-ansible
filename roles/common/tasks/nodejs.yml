@@ -11,7 +11,7 @@
       file: app_presetup.yml
 
 - name: Download NodeJs Dependencies
-  ansible.builtin.shell: npm Install
+  ansible.builtin.shell: npm install
   args:
     chdir: /app
 
