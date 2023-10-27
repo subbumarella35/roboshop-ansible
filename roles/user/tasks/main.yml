@@ -1,0 +1,11 @@
+- name: Install nodejs
+  ansible.builtin.import_role:  
+    name: common
+    tasks_from: nodejs
+
+- name: Load schema
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: mongodb_scheme_setup
+
+    
