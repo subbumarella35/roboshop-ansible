@@ -4,7 +4,7 @@
     state: installed
 
 - name: Load schema
-  ansible.builtin.shell: mysql --host mysql-dev.roboshopmarket.store -uroot -pRoboShop@1	</app/schema/{{component}}.js
+  ansible.builtin.shell: mysql --host mysql-dev.roboshopmarket.store -uroot -pRoboShop@1	</app/schema/{{component}}.sql
 
 
     
