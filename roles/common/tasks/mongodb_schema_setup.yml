@@ -11,10 +11,5 @@
 - name: Load schema
   ansible.builtin.shell: mongo --host mongodb-dev.roboshopmarket.store </app/schema/{{ component }}.js
 
-- name: Restart the Service
-  ansible.builtin.service:
-     state: restarted
-     name: shipping
-     enabled: true
 
     
