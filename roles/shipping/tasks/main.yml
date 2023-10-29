@@ -1,7 +1,7 @@
 - name:  Load maven
   ansible.builtin.import_role:
     name: common
-    tasks_from: maven.yml
+    tasks_from: maven
 
 
 

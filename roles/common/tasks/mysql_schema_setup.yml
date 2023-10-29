@@ -5,10 +5,3 @@
 
 - name: Load schema
   ansible.builtin.shell: mysql -h mysql-dev.roboshopmarket.store -uroot -pRoboShop@1	</app/schema/shipping.sql
-
-# - name: Restart the Service
-#   ansible.builtin.service:
-#      state: restarted
-#      name: shipping
-#      enabled: true
-    
