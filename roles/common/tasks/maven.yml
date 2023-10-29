@@ -15,9 +15,3 @@
 - name: MySQL Schema Setup
   ansible.builtin.import_tasks:
     file: mysql_schema_setup.yml
-
-- name: Restart the Service
-  ansible.builtin.service:
-     state: restarted
-     name: shipping
-     enabled: true
