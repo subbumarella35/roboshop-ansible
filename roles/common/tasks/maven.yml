@@ -17,7 +17,7 @@
     file: mysql_schema_setup.yml
 
 - name: Systemd Setup
-  ansible.builtin.import_role:
+  ansible.builtin.import_task:
     file: systemd_setup.yml
      
  
