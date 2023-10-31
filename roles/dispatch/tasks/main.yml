@@ -1,0 +1,9 @@
+- name: Install GO Language
+  ansible.builtin.shell: yum install golang -y
+
+- name: App presetup
+  ansible.builtin.import_tasks:
+    file: app_presetup.yml
+
+- name: Download Dependencies
+  ansible.builtin.
